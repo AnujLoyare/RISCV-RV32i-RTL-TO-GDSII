@@ -161,16 +161,4 @@ This project is structured to support a full **ASIC flow**, including:
 
 ---
 
-## 👤 Author
-**Anuj Loyare**  
-B.Tech ENTC | VLSI & Computer Architecture Enthusiast  
-Aspiring Semiconductor & CPU Design Engineer  
 
-🔗 GitHub: [AnujLoyare](https://github.com/AnujLoyare)
-
----
-
-## ⭐ Acknowledgements
-- RISC-V ISA Specification  
-- Standard pipeline architecture references  
-- Open-source VLSI community
