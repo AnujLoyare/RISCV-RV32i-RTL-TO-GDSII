@@ -1,0 +1,17 @@
+# Vivado generated files
+*.jou
+*.log
+*.str
+*.wcfg
+
+RISCV_CPU_RTL_TO_GDSII.cache/
+RISCV_CPU_RTL_TO_GDSII.hw/
+RISCV_CPU_RTL_TO_GDSII.ip_user_files/
+RISCV_CPU_RTL_TO_GDSII.runs/
+RISCV_CPU_RTL_TO_GDSII.sim/
+RISCV_CPU_RTL_TO_GDSII.srcs/
+RISCV_CPU_RTL_TO_GDSII.xpr
+
+# OS junk
+.DS_Store
+Thumbs.db
