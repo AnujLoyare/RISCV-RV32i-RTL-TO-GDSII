@@ -21,13 +21,8 @@
 
 // alu_decoder.v - logic for ALU decoder
 
-module alu_decoder (
-    input            opb5,
-    input [2:0]      funct3,
-    input            funct7b5,
-    input [1:0]      ALUOp,
-    output reg [3:0] ALUControl
-);
+module alu_decoder (input            opb5,input [2:0]      funct3,input            funct7b5,
+input [1:0]      ALUOp,output reg [3:0] ALUControl);
 
 always @(*) begin
     case (ALUOp)
@@ -44,7 +39,12 @@ always @(*) begin
                 3'b110:  ALUControl = 4'b0011; // or, ori
                 3'b111:  ALUControl = 4'b0010; // and, andi
                 3'b100:  ALUControl = 4'b0100; // xor, xori
-                3'b001:  if(!(funct7b5)) ALUControl = 4'b1000; // sll, slli
+                3'b001:  begin
+                    if (!funct7b5)
+                        ALUControl = 4'b1000; // sll
+                    else
+                        ALUControl = 4'b0000; // safe fallback
+                end
                 3'b101:  begin
                             if(!(funct7b5)) ALUControl = 4'b1111; // srl, srli
                             else ALUControl = 4'b1001; // sra, srai
